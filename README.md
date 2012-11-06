@@ -1,7 +1,7 @@
 # Standalone version
 
-Far from perfect, but does the job of getting a quick clean and ready VM to start installing Symfony 2.
-For a puppet server, probably better use the puppetlabs forge modules.
+Does the job of getting a quick clean and ready VM to start installing Symfony 2.
+For a puppet server, better use the puppetlabs forge modules.
 
 ## Ubuntu box
 
