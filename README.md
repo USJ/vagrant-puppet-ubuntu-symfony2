@@ -5,7 +5,7 @@ For a puppet server, better use the puppetlabs forge modules.
 
 ## Ubuntu box
 
-* 12.04: http://files.vagrantup.com/precise32.box
+* Ubuntu Server 12.04 amd64 (to match the server): https://dl.dropbox.com/u/1543052/Boxes/UbuntuServer12.04amd64.box
 
 ## Default options
 
