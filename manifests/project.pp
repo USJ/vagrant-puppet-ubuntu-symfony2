@@ -12,6 +12,12 @@ class project {
     require => Package['apache2'],
   }
 
+  # Create the logs folder to put the log files of the vhost
+  file {'ums2-vhost-logs':
+    ensure => 'directory',
+    path   => '/srv/www/myusj/logs',
+  }
+
   # Create a virtual host file for our website
   file {'ums2-vhost':
     ensure  => present,
@@ -20,7 +26,7 @@ class project {
     group   => 'root',
     content => template('project/vhost.erb'),
     # Make sure apache is installed before creating the file
-    require => Package['apache2'],
+    require => [ Package['apache2'], File ['ums2-vhost-logs'] ],
   }
 
   # Enable our virtual host

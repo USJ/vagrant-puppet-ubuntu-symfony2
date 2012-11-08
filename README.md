@@ -5,13 +5,13 @@ For a puppet server, better use the puppetlabs forge modules.
 
 ## Ubuntu box
 
-* Ubuntu Server 12.04 amd64 (to match the server): https://dl.dropbox.com/u/1543052/Boxes/UbuntuServer12.04amd64.box
+* Ubuntu Server 12.04.1 amd64 (to match the server): link coming soon
 
 ## Default options
 
 * apache vhost server name: vagrant.localhost
 * apache vhost port number: 4567
-* apache vhost document root: vagrant/symfony2/web
+* apache vhost document root: /srv/www/myusj/public_html/web
 
 ## Vagrant up
 
@@ -27,7 +27,7 @@ The box will have all the packages installed to meet the symfony 2 requirements.
 
 * vagrant ssh 
 * inside the /vagrant folder, install [composer](http://getcomposer.org/)
-* install [Symfony 2](http://symfony.com/doc/current/quick_tour/the_big_picture.html) in vagrant/symfony2 (if using default options)
+* install [Symfony 2](http://symfony.com/doc/current/quick_tour/the_big_picture.html) in vagrant/symfony2 (if using default options) in vagrant/public_html folder (important because the shared folder point there)
 * update check.php, app_dev.php and others accordingly to allow your remote server ip address
 
 Should work.
@@ -36,5 +36,3 @@ Should work.
 
 * everything hardcoded, no arguments/options
 * everything mainly in one manifest file
-* to solve Symfony cache issues, apache user/group is changed to vagrant/vagrant
-* it is pretty slow (demo page is ~30ms in local, ~1500ms through VM), seems to be related to VirtualBox shared folders issues: http://forum.symfony-project.org/viewtopic.php?t=52241&p=147056

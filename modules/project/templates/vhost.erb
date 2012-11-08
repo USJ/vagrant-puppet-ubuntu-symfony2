@@ -1,11 +1,7 @@
 <VirtualHost *:80> 
-    ServerAdmin guill@usj.edu.mo 
-    DocumentRoot "/vagrant/symfony2/web" 
-    ServerName vagrant.localhost 
-    <Directory "/vagrant/symfony2/web"> 
-                Options Indexes FollowSymLinks 
-                AllowOverride All 
-                Order allow,deny 
-                Allow from All 
-    </Directory> 
+    ServerAdmin itsupport@usj.edu.mo 
+    ServerName vagrant.localhost
+    DocumentRoot /srv/www/myusj/public_html/web/
+    ErrorLog /srv/www/myusj/logs/error.log
+    CustomLog /srv/www/myusj/logs/access.log combined
 </VirtualHost>
