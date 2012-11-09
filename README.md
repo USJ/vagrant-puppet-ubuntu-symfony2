@@ -8,7 +8,7 @@ Does the job of getting a quick clean and ready VM to start playing with Symfony
 
 ## Default options
 
-* apache vhost server name: vagrant.localhost
+* apache vhost server name: myusj.localhost
 * apache vhost port number: 4567
 * apache vhost document root: /srv/www/myusj/public_html/web
 
@@ -17,8 +17,8 @@ Does the job of getting a quick clean and ready VM to start playing with Symfony
 Everything should start fine. 
 If using the default options:
 
-* make an entry in your local hosts file for: 127.0.0.1 vagrant.localhost
-* connect using: http://vagrant.localhost:4567
+* make an entry in your local hosts file for: 127.0.0.1 myusj.localhost
+* connect using: http://myusj.localhost:4567
 
 The box will have all the packages installed to meet the symfony 2 requirements.
 
