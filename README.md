@@ -1,11 +1,10 @@
 # Standalone version
 
-Does the job of getting a quick clean and ready VM to start installing Symfony 2.
-For a puppet server, better use the puppetlabs forge modules.
+Does the job of getting a quick clean and ready VM to start playing with Symfony 2.
 
 ## Ubuntu box
 
-* Ubuntu Server 12.04.1 amd64 (to match the server): link coming soon
+* Ubuntu Server 12.04.1 amd64 with VB 4.2.4 (will be downloaded automatically at first start)
 
 ## Default options
 
@@ -23,11 +22,9 @@ If using the default options:
 
 The box will have all the packages installed to meet the symfony 2 requirements.
 
-## Install Symfony 2
+## Symfony 2
 
-* vagrant ssh 
-* inside the /vagrant folder, install [composer](http://getcomposer.org/)
-* install [Symfony 2](http://symfony.com/doc/current/quick_tour/the_big_picture.html) in vagrant/symfony2 (if using default options) in vagrant/public_html folder (important because the shared folder point there)
+* Put the content of Symfony 2 in vagrant/public_html folder (important because the shared folder point there)
 * update check.php, app_dev.php and others accordingly to allow your remote server ip address
 
 Should work.
@@ -35,4 +32,3 @@ Should work.
 ## What's crappy for now
 
 * everything hardcoded, no arguments/options
-* everything mainly in one manifest file
