@@ -11,7 +11,7 @@ class php {
   }
 
   # List php enhancers modules
-  $php_enhancers = [ 'php5-intl', 'php5-mysql' ]
+  $php_enhancers = [ 'php5-intl', 'php5-mysql', 'php5-fpm' ]
   # Make sure the php enhancers are installed
   package { $php_enhancers:
     ensure  => installed,
