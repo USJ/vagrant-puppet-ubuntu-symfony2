@@ -7,6 +7,7 @@ class project {
 
   include apache
   include php
+  include nginx
 }
 
 include project
