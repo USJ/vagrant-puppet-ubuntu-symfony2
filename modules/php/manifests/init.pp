@@ -10,6 +10,11 @@ class php {
     notify  => Service['apache2'],
   }
 
+  package {'php-pear':
+    ensure => present,
+    require => Package['php5'],
+  }
+
   # List php enhancers modules
   $php_enhancers = [ 'php5-intl', 'php5-mysql', 'php5-fpm' ]
   # Make sure the php enhancers are installed
