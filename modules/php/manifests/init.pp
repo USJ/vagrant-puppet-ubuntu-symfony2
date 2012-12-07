@@ -12,9 +12,9 @@ class php {
     notify  => Service['apache2'],
   }
 
-  service {'php5-fpm':
-    ensure => running,
-    require => Package['php5-fpm']
+  package {'php-pear':
+    ensure => present,
+    require => Package['php5'],
   }
 
   # List php enhancers modules
