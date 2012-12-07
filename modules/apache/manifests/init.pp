@@ -6,7 +6,7 @@ class apache {
 
   # Make sure apache is running
   service {'apache2':
-    ensure  => stopped,
+    ensure  => running,
     # Make sure apache is installed before checking
     require => Package['apache2'],
   }
