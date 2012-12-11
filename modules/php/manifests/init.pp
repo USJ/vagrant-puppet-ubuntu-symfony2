@@ -3,9 +3,7 @@ class php {
   package {'php5':
     ensure => '5.3.10-1ubuntu3.4',
   }
-  package {'php5-fpm':
-    ensure => installed,
-  }
+
   package {'php-apc':
     ensure => '3.1.7-1',
     require => Package['php5'],
@@ -18,7 +16,7 @@ class php {
   }
 
   # List php enhancers modules
-  $php_enhancers = [ 'php5-intl', 'php5-mysql', 'php-pear' ]
+  $php_enhancers = [ 'php5-intl', 'php5-mysql', 'php5-fpm' ]
   # Make sure the php enhancers are installed
   package { $php_enhancers:
     ensure  => installed,
@@ -35,19 +33,4 @@ class php {
     content => template('php/symfony2-php-conf.erb'),
     require => Package['php5'],
   }
-
-  exec { 'pecl install mongo':
-    notify => Service["php5-fpm"],
-    command => '/usr/bin/pecl install --force mongo',
-    logoutput => "on_failure",
-    require => [Package[$php_enhancers]],
-    before => [File['symfony2-php-conf']],
-    unless => "/usr/bin/php -m | grep mongo",
-  }
-
-  exec { 'pear config-set auto_discover 1':
-    command => '/usr/bin/pear config-set auto_discover 1',
-    require => Package[$php_enhancers],
-  }
-
 }
