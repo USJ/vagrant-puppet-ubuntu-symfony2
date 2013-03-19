@@ -1,7 +1,7 @@
 class apache {
   # Make sure apache is present
   package {'apache2':
-    ensure => '2.2.22-1ubuntu1.2',
+    ensure => '2.2.22-1ubuntu1.3',
   }
 
   # Make sure apache is running
