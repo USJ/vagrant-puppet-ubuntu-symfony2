@@ -1,7 +1,7 @@
 class php {
   # Make sure php5 is present
   package {'php5':
-    ensure => '5.3.10-1ubuntu3.5',
+    ensure => '5.3.10-1ubuntu3.6',
   }
 
   package {'php-apc':
